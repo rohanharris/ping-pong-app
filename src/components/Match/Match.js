@@ -15,15 +15,17 @@ class Match extends Component{
 
 
     handleClick(e){
+        
 
     }
 
     render(){
         return(
             <>
-                 <h2><Link to="/">Home</Link></h2>
+                 {/* <h2><Link to="/">Home</Link></h2> */}
 
                 <p> Lets get going! </p>
+                <button>Reset</button>
             </>
         )
     }

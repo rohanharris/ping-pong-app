@@ -58,7 +58,7 @@ class Form extends Component{
 
         let {players} = this.state;
 
-        if(players.length > 0 && Math.log2(players.length)){
+        if(players % 2 === 0){
             this.props.handleMatch(players)
         } else {
             this.setState({ errorLength: true })
@@ -127,8 +127,8 @@ class Form extends Component{
             </div>
             
             <div>
-                 <button onSubmit= { this.handleSubmit }>Start Game!  </button>
-                 {/* <Link to="/match">Start Game!</Link> */}
+                 <button onClick= { this.handleSubmit }>Start Game! </button>
+                 
             </div>
 
         </div>
@@ -141,3 +141,5 @@ class Form extends Component{
 
 
 export default Form;
+
+ {/* <Link to="/match">Start Game!</Link> */}

@@ -2,6 +2,7 @@
 const initial = {
     players: [],
     matches: [],
+    tournament: false,
  
 };
 

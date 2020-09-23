@@ -10,11 +10,18 @@ const deletePlayer = (state) => {
     return { ...state, players: state.players };
 }
 
+const tournament = (state) => {
+    return {
+        ...state,
+        tournament: true,
+    }
+}
+
 
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "ADDPLAYER" : return addPlayer(state, action);
+    case "ADDPLAYER" : return tournament(addPlayer(state, action));
     case "DELETEPLAYER" : return deletePlayer(state, action);
     // case "RESET" : return initial;
     default: return state;
