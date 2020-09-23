@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 import './App.css';
-import Header from './components/Header';
-import Form from './components/Form';
-import Match from './components/Match';
+import Header from './Header/Header';
+import Form from './Form/Form';
+import Match from './Match/Match';
 
 
 // import { createStore } from 'redux';
@@ -17,26 +17,6 @@ import Match from './components/Match';
 // };
 
 
-// const newPlayer = (state) => {
-//   return { ...state, players: state.players + players };
-// }
-
-// const deletePlayer = (state) => {
-
-//   return { ...state, players: state.players - players}
-
-// }
-
-
-// const reducer = (state, action) => {
-//   switch (action.type) {
-//     case "NEWPLAYER" : return newPlayer(state);
-        // case "DELETE" : return deletePlayer(state);
-        // case "RESET" : return initialState,
-//     default: return state;
-//   }
-// }
-
 
 // added to store.js
 
@@ -48,7 +28,7 @@ import Match from './components/Match';
   // );
 
 
-
+// dont need this. 
 // store.suscribe(() => {
 //   console.log(store.getState());
 // });

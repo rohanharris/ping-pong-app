@@ -8,13 +8,13 @@ class Form extends Component{
 
         // setting the original state
         this.state= {
-            players: [],
+            // players: [] is now in wrapper
             name: "",
             error: false,
             
         }
 
-        // Binding the event handler so that the name can be deconstructed.
+        // Binding the event handler so that the name can be deconstructed and 'this' can be used.
         this.handleName = this.handleName.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleError = this.handleError.bind(this);
@@ -44,7 +44,7 @@ class Form extends Component{
 
 
     render(){
-        let players = this.state.players;
+        let { players } = this.props;
 
         return(
 
