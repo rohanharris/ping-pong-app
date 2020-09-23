@@ -1,8 +1,8 @@
 
-const addPlayer = (state, { name }) => {
+const addPlayer = (state, { players }) => {
   return { 
       ...state,
-       players: [ ...state.players, {"value": name} ],
+       players: players, 
     };
 }
 

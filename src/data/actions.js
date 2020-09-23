@@ -1,6 +1,7 @@
-export const addPlayer = () => {
+export const addPlayer = ( players ) => {
     return {
         type: "ADDPLAYER",
+        players: players,
 
     }
 

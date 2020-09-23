@@ -10,52 +10,81 @@ class Form extends Component{
         this.state= {
             players: [],
             name: "",
-            error: false,
+            errorName: false,
+            errorLength: false,
             
         };
 
         // Binding the event handler so that the name can be deconstructed and 'this' can be used.
         this.handleName = this.handleName.bind(this);
-        this.handleAddName = this.handleAddName.bind(this);
-        this.handleError = this.handleError.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+       
        
     }
 
     //  sets the new state to be whatever name is typed into the input box
     handleName(e){
-        this.setState({ name: e.currentTarget.value });
+        this.setState({ 
+            name: e.currentTarget.value, 
+            errorName: false
+            // this gets rid of the error message when a name is typed
+        });
     }
 
-
-    handleError(e){
-        this.setState({ error: true });
-    }
+    
 
 
-    handleAddName(e){
+    handleClick(e){
         // prevents the page from refreshing 
         e.preventDefault();
-        this.props.onClick(this.props.players);
-
+        
         let name = this.state.name;
       
 
-        
+        if( name !== ""){
         // rests name to empty string. creates new version of state and name is added to player array 
         this.setState({
             players: [ ...this.state.players, name],
             name: ""
-        })
+            });
+        }else {
+             this.setState({ errorName: true})
+        }
+    }
+
+    handleSubmit(e){
+        e.preventDefault();
+
+        let {players} = this.state;
+
+        if(players.length > 0 && Math.log2(players.length)){
+            this.props.handleMatch(players)
+        } else {
+            this.setState({ errorLength: true })
+        }
+
+        
+
     }
 
 
     render(){
-        let { players, name } = this.state;
+        let { players, name, errorName, errorLength } = this.state;
+
+        // const factorOfTwo = index => {return (index % 2 === 0)}
+
+        let wrongName = "You must enter a name!";
+        let wrongLength = " You must have an even number of players!"
 
         return(
+            <>
+            <div>
+                 <p>{ errorName ?  wrongName : errorLength ? wrongLength :  null }</p>
+            </div>
 
             
-        <>
+       
         <div className="container">
             <form className="form-component">
                 <h2> Add your player</h2>
@@ -71,7 +100,7 @@ class Form extends Component{
                 ></input>
 
                 <button 
-                    onClick={ this.handleAddName }
+                    onClick={ this.handleClick }
                 >
                 Add
                 </button>
@@ -98,7 +127,8 @@ class Form extends Component{
             </div>
             
             <div>
-                 <button><Link to="/match">Start Game!</Link>  </button>
+                 <button onSubmit= { this.handleSubmit }>Start Game!  </button>
+                 {/* <Link to="/match">Start Game!</Link> */}
             </div>
 
         </div>
