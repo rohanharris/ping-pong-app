@@ -1,6 +1,7 @@
 export const addPlayer = () => {
     return {
-        type: "NEWPLAYER",
+        type: "ADDPLAYER",
+
     }
 
 }

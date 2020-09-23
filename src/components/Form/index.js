@@ -15,6 +15,10 @@ const mapStateToProps = state  => ({
 
 
 const mapDispatchToProps = (dispatch) => {
+    return{
+
+    onClick: (players) => console.log(players)
+    }
 
 
 };

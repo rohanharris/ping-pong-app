@@ -2,7 +2,7 @@
 const addPlayer = (state, { name }) => {
   return { 
       ...state,
-       players: [ state.players, {"name": name} ],
+       players: [ ...state.players, {"value": name} ],
     };
 }
 

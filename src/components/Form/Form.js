@@ -35,20 +35,22 @@ class Form extends Component{
     handleAddName(e){
         // prevents the page from refreshing 
         e.preventDefault();
+        this.props.onClick(this.props.players);
 
         let name = this.state.name;
+      
 
         
         // rests name to empty string. creates new version of state and name is added to player array 
         this.setState({
-            players: [ ...this.state.players],
-           name: ""
+            players: [ ...this.state.players, name],
+            name: ""
         })
     }
 
 
     render(){
-        let { players } = this.props;
+        let { players, name } = this.state;
 
         return(
 
@@ -64,7 +66,7 @@ class Form extends Component{
                     id="playerName" 
                     type="text" 
                     maxLength="30"
-                    value={ this.state.name}
+                    value={ name}
                    
                 ></input>
 
@@ -84,15 +86,15 @@ class Form extends Component{
             {/* maps over player array and shows them as list items  */}
             <div>
                 <p> Player's names </p>
-                <li>{players.map((value, index) => (
-                    <>
-                    <span key={index}>{ value}</span>
+                <ul>{players.map((value, index) => (
+                    <li key={index}>
+                    <span >{ value }</span>
                     <button>Delete</button>
-                    </>
+                    </li>
 
 
                 ))}
-                </li>
+                </ul>
             </div>
             
             <div>
