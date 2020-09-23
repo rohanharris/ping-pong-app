@@ -3,7 +3,7 @@ import React from 'react';
 
 const Header = () => (
 
-    <h1> Pong or Ping </h1>
+    <h1> Lord of the Ping </h1>
 
 
 )

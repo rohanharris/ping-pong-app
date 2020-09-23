@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 
 class Form extends Component{
@@ -7,19 +8,25 @@ class Form extends Component{
 
         // setting the original state
         this.state= {
-            player: [],
+            players: [],
             name: "",
+            error: false,
             
         }
 
         // Binding the event handler so that the name can be deconstructed.
         this.handleName = this.handleName.bind(this);
         this.handleClick = this.handleClick.bind(this);
+        this.handleError = this.handleError.bind(this);
     }
 
     //  sets the new state to be whatever name is typed into the input box
     handleName(e){
         this.setState({ name: e.currentTarget.value })
+    }
+
+    handleError(e){
+        this.setState({ error: true })
     }
 
     handleClick(e){
@@ -30,14 +37,14 @@ class Form extends Component{
 
         // rests name to empty string. creates new version of state and name is added to player array 
         this.setState({
-            player:[...this.state.player, name ],
+            players:[...this.state.players, name ],
             name: ""
         })
     }
 
 
     render(){
-        let player = this.state.player;
+        let players = this.state.players;
 
         return(
 
@@ -69,7 +76,7 @@ class Form extends Component{
             {/* maps over player array and shows them as list items  */}
             <div>
                 <p> Player's names </p>
-                <ul>{player.map((value, index) => (
+                <ul>{players.map((value, index) => (
                     <li key={index}>{ value}</li>
 
 
@@ -79,7 +86,7 @@ class Form extends Component{
             </div>
             
             <div>
-                 <button> Start Game! </button>
+                 <button><Link to="/match">Start Game!</Link>  </button>
             </div>
 
         </div>
