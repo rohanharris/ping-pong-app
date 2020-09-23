@@ -1,24 +1,22 @@
-import react from 'react';
 
-
-
-
-const newPlayer = (state) => {
-  return { ...state, players: state.players + players };
+const addPlayer = (state, { name }) => {
+  return { 
+      ...state,
+       players: [ state.players, {"name": name} ],
+    };
 }
 
 const deletePlayer = (state) => {
-    return { ...state, players: state.players - players}
-
+    return { ...state, players: state.players };
 }
 
 
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "NEWPLAYER" : return newPlayer(state);
-    case "DELETE" : return deletePlayer(state);
-    case "RESET" : return initialState;
+    case "ADDPLAYER" : return addPlayer(state, action);
+    case "DELETEPLAYER" : return deletePlayer(state, action);
+    // case "RESET" : return initial;
     default: return state;
   }
 }

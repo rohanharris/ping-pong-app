@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
-import './App.css';
-import Header from './Header/Header';
-import Form from './Form/Form';
-import Match from './Match/Match';
+import '.././App.css';
+import Header from './Header';
+import Form from './Form';
+import Match from './Match';
 
 
 // import { createStore } from 'redux';
@@ -41,20 +41,22 @@ import Match from './Match/Match';
 
 function App() {
   return (
-  <React.Fragment>
-    <Router>
-      <Switch>
-        <Route exact path ="/">
-          <Header />
-          <Form />
-        </Route>
+    <React.Fragment>
+      <Router>
+        <Header />
+        <Switch>
 
-        <Route exact path="/match">
-          <Match />
-        </Route>
-      </Switch>
-   </Router>
-  </React.Fragment>
+          <Route exact path ="/">
+           <Form />
+          </Route>
+
+          <Route exact path="/match">
+            <Match />
+          </Route>
+
+        </Switch>
+    </Router>
+    </React.Fragment>
   );
 }
 

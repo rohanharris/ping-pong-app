@@ -1,12 +1,8 @@
-import react from 'react';
-
 
 const initial = {
     players: [],
     matches: [],
-    name: "",
-    error: false,
-
+ 
 };
 
 

@@ -8,37 +8,41 @@ class Form extends Component{
 
         // setting the original state
         this.state= {
-            // players: [] is now in wrapper
+            players: [],
             name: "",
             error: false,
             
-        }
+        };
 
         // Binding the event handler so that the name can be deconstructed and 'this' can be used.
         this.handleName = this.handleName.bind(this);
-        this.handleClick = this.handleClick.bind(this);
+        this.handleAddName = this.handleAddName.bind(this);
         this.handleError = this.handleError.bind(this);
+       
     }
 
     //  sets the new state to be whatever name is typed into the input box
     handleName(e){
-        this.setState({ name: e.currentTarget.value })
+        this.setState({ name: e.currentTarget.value });
     }
+
 
     handleError(e){
-        this.setState({ error: true })
+        this.setState({ error: true });
     }
 
-    handleClick(e){
+
+    handleAddName(e){
         // prevents the page from refreshing 
-        e.preventDefault() 
+        e.preventDefault();
 
         let name = this.state.name;
 
+        
         // rests name to empty string. creates new version of state and name is added to player array 
         this.setState({
-            players:[...this.state.players, name ],
-            name: ""
+            players: [ ...this.state.players],
+           name: ""
         })
     }
 
@@ -49,11 +53,9 @@ class Form extends Component{
         return(
 
             
-
-        <div>
-            
-
-            <form>
+        <>
+        <div className="container">
+            <form className="form-component">
                 <h2> Add your player</h2>
 
                 <label htmlFor="playerName">Name</label>
@@ -67,22 +69,30 @@ class Form extends Component{
                 ></input>
 
                 <button 
-                    onClick={ this.handleClick }
-                >Add</button>
+                    onClick={ this.handleAddName }
+                >
+                Add
+                </button>
+            
 
 
             </form>
+            </div>
+
+            <div>
 
             {/* maps over player array and shows them as list items  */}
             <div>
                 <p> Player's names </p>
-                <ul>{players.map((value, index) => (
-                    <li key={index}>{ value}</li>
+                <li>{players.map((value, index) => (
+                    <>
+                    <span key={index}>{ value}</span>
+                    <button>Delete</button>
+                    </>
 
 
                 ))}
-
-                </ul>
+                </li>
             </div>
             
             <div>
@@ -90,16 +100,12 @@ class Form extends Component{
             </div>
 
         </div>
+        </>
 
         )
     }
 
-
-
-
-
-
 }
 
 
-export default Form
+export default Form;
