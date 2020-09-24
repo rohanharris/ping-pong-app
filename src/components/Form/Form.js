@@ -8,8 +8,10 @@ class Form extends Component{
 
         // setting the original state
         this.state= {
-            players: [],
             name: "",
+            players: [],
+            shuffle: [],
+            
             errorName: false,
             errorLength: false,
             
@@ -17,8 +19,9 @@ class Form extends Component{
 
         // Binding the event handler so that the name can be deconstructed and 'this' can be used.
         this.handleName = this.handleName.bind(this);
-        this.handleClick = this.handleClick.bind(this);
+        this.handleAdd = this.handleAdd.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
        
        
     }
@@ -35,17 +38,17 @@ class Form extends Component{
     
 
 
-    handleClick(e){
+    handleAdd(e){
         // prevents the page from refreshing 
         e.preventDefault();
         
-        let name = this.state.name;
-      
-
+        let {name, players, shuffle} = this.state;
+        
         if( name !== ""){
         // rests name to empty string. creates new version of state and name is added to player array 
         this.setState({
-            players: [ ...this.state.players, name],
+            players: [ ...players, name],
+            shuffle:[...shuffle, name ],
             name: ""
             });
         }else {
@@ -53,18 +56,25 @@ class Form extends Component{
         }
     }
 
+
+
     handleSubmit(e){
         e.preventDefault();
 
         let {players} = this.state;
 
-        if(players % 2 === 0){
-            this.props.handleMatch(players)
+        if(players.length > 0 && players.length % 2 === 0){
+            this.props.handlePlayers(players);
+            this.props.handleMatch(players);
         } else {
             this.setState({ errorLength: true })
         }
 
-        
+    }
+
+
+    handleDelete(id){
+        this.props.delete(id);
 
     }
 
@@ -100,7 +110,7 @@ class Form extends Component{
                 ></input>
 
                 <button 
-                    onClick={ this.handleClick }
+                    onClick={ this.handleAdd }
                 >
                 Add
                 </button>
@@ -115,10 +125,10 @@ class Form extends Component{
             {/* maps over player array and shows them as list items  */}
             <div>
                 <p> Player's names </p>
-                <ul>{players.map((value, index) => (
+                <ul>{players.map((player, index) => (
                     <li key={index}>
-                    <span >{ value }</span>
-                    <button>Delete</button>
+                    <span >{ player}</span>
+                    <button onClick={ () => this.handleDelete(index)}>Delete</button>
                     </li>
 
 

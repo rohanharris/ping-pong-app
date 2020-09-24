@@ -20,11 +20,23 @@ class Match extends Component{
     }
 
     render(){
+        let { matches, players }= this.props;
         return(
             <>
                  {/* <h2><Link to="/">Home</Link></h2> */}
 
-                <p> Lets get going! </p>
+                <p> One ping to rule them all! </p>
+
+                <div> 
+                    {matches.map((match,index) => (
+                        <>
+                    <div key={index}>{match[0]}</div>
+                    <div key={index}>{match[1]}</div>
+                    </>
+                ))}
+
+
+                </div>
                 <button onClick= { this.props.handleReset }>Reset</button>
             </>
         )

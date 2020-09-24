@@ -8,9 +8,20 @@ export const addPlayer = ( players ) => {
 }
 
 
-export const deletePlayer = () => {
+export const deletePlayer = (id) => {
     return {
-        type: "DELETEPLAYER"
+        type: "DELETEPLAYER",
+        id: id,
+    }
+
+}
+
+
+export const createMatch = ( {players, shuffle}) => {
+    return {
+        type: "CREATEMATCH",
+        players: players, 
+        shuffle: shuffle,
     }
 
 }
