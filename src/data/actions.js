@@ -15,6 +15,12 @@ export const deletePlayer = () => {
 
 }
 
+export const reset = () => {
+    return {
+        type: "RESET"
+    }
+}
+
 
 
 // action creators that hold the actions (type)

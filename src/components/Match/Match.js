@@ -15,7 +15,7 @@ class Match extends Component{
 
 
     handleClick(e){
-        
+
 
     }
 
@@ -25,7 +25,7 @@ class Match extends Component{
                  {/* <h2><Link to="/">Home</Link></h2> */}
 
                 <p> Lets get going! </p>
-                <button>Reset</button>
+                <button onClick= { this.props.handleReset }>Reset</button>
             </>
         )
     }

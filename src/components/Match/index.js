@@ -1,9 +1,16 @@
 import { connect } from 'react-redux';
 import Match from './Match';
+import { reset } from "../../data/actions"
 
 
 const mapStateToProps = () => ({
     
 })
 
-export default connect(mapStateToProps)(Match);
+const mapDispatchToProps = (dispatch) => {
+    return{
+        handleReset: () => dispatch(reset())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Match);

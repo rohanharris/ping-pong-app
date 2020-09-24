@@ -1,3 +1,4 @@
+import initial from './initial';
 
 const addPlayer = (state, { players }) => {
   return { 
@@ -17,13 +18,18 @@ const tournament = (state) => {
     }
 }
 
+const reset = () => {
+    return{
+        ...initial 
+    }
+}
 
 
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADDPLAYER" : return tournament(addPlayer(state, action));
     case "DELETEPLAYER" : return deletePlayer(state, action);
-    // case "RESET" : return initial;
+    case "RESET" : return reset(state);
     default: return state;
   }
 }
