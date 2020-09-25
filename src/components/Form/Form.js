@@ -77,7 +77,8 @@ class Form extends Component{
         let { players, name, errorName, errorLength } = this.state;
 
         let wrongName = "You must enter a name!";
-        let wrongLength = " You must have an even number of players!"
+        let wrongLength = " You must have an even number of players!";
+        // let startMessage = "Welcome! Enter your names and click the ring! Who will be the Lord of the Pings?"
 
         return(
             
@@ -128,7 +129,7 @@ class Form extends Component{
                 </ul>
             </section>
             
-              <button className='item4 start-btn btn' onClick= { this.handleSubmit }>Only one to rule them all... </button>
+              <button className='item4 start-btn btn' onClick= { this.handleSubmit }>Only one... </button>
     
             
         </div>

@@ -21,7 +21,7 @@ class Match extends Component{
         
         return(
             <>
-                <h2> One ping to rule them all! </h2>
+                <h2> ...to rule them all! </h2>
 
                 <div> 
                     <p>playing list</p> 

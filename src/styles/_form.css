@@ -8,6 +8,7 @@
     '. d d .';
 
     gap: 2rem;
+    color: black;
     
 }
 
@@ -15,12 +16,18 @@
     grid-area: a;
     text-align:center;
     font-style: italic;
+    font-family:  cursive;
+    font-size: 2rem;
     color: rgb(243, 211, 69);
 
 }
 
 .item2{
-    grid-area: b;   
+    grid-area: b;  
+    height: 10rem;
+    /* display:flex;
+    justify-content: flex-end; 
+    flex-direction: column; */
 }
 
 
@@ -62,7 +69,8 @@ h2{
 .btn{
     color: rgb(165, 142, 12);
     background-color: rgb(5, 7, 5);
-    border:2px solid rgb(17, 16, 2);
+    border:4px solid rgb(17, 16, 2);
+    
     
     
 
@@ -73,7 +81,7 @@ h2{
     background-color: rgb(5, 7, 5);
     border:2px solid rgb(156, 147, 15);
     text-align: center;
-    box-shadow: 4px 4px 4px 2px rgba(121, 119, 42, 0.52);
+    box-shadow: 4px 4px 4px 1px rgba(160, 157, 74, 0.52);
     border-radius: 100%;
     height: 15rem;
     width: 15rem;
@@ -81,7 +89,38 @@ h2{
     font-style: italic;
     font-family: cursive;
     
-   text-shadow: 2px 2px 8px #978520;
+   text-shadow: 3px 2px 8px #978520;
+   /* -webkit-animation: glow 1s ease-in-out infinite alternate;
+   -moz-animation: glow 1s ease-in-out infinite alternate;
+   animation: glow 1s ease-in-out infinite alternate; */
+ }
+ /* @keyframes glow {
+   from {
+     text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 
+                  0 0 50px #b9b354, 0 0 60px #b3ad54, 0 0 70px #9c8f43;
+   }
+   to {
+     text-shadow: 0 0 20px #eeeeee, 0 0 30px #a7b846, 0 0 40px #c5c76f, 0 0 50px #cfb51e,
+                  0 0 60px #c27512, 0 0 70px #a37a09, 0 0 80px #bd7f0d;
+   }
+ } */
+
+
+input{
     
+
+    height: 3rem;
+    background-color: rgba(63, 47, 12, 0.52);
+    color: rgba(245, 176, 49, 0.52);
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    
+    background-image: linear-gradient(to bottom, #c0b40d,#63470b, #493403);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
 }
 
