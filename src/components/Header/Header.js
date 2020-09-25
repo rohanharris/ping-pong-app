@@ -3,8 +3,9 @@ import React from 'react';
 
 const Header = () => (
 
-    <h1> Lord of the Ping </h1>
-
+<header className='header'>
+    <h1> Lord of the Pings </h1>
+</header>
 
 )
 

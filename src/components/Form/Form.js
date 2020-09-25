@@ -80,62 +80,59 @@ class Form extends Component{
         let wrongLength = " You must have an even number of players!"
 
         return(
-            <>
-            <div>
-                <p>
+            
+            <div className='container'>
+                <p className='item1'>
                     {/* error messages will appear if criteria not met */}
                     { errorName ?  wrongName : errorLength ? wrongLength :  null } 
                 </p>
-            </div>
+            
 
-            <div className="container">
-            <form className="form-component">
+            
+            <form className="item2 card">
                 <h2> Add your player</h2>
-
-                <label htmlFor="playerName">Name</label>
-                <input 
-                    onChange={ this.handleChange  } 
-                    id="playerName" 
-                    type="text" 
-                    maxLength="30"
-                    value={ name}
+                
+                    <label htmlFor="playerName" ></label>
+                    <input 
+                        placeholder="Enter a name.."
+                        onChange={ this.handleChange  } 
+                        id="playerName" 
+                        type="text" 
+                        maxLength="30"
+                        value={ name}
                    
-                ></input>
+                    ></input>
 
-                <button 
+                <button className='btn'
                     onClick={ this.handleClick }
                 >
                 Add
                 </button>
         
-            </form>
-            </div>
-
-            <div>
+                </form>
+           
 
             {/* maps over player array and shows them as list items  */}
-            <div>
-                <p> Player's names </p>
+            <section className='card item3'>
+                <h2> Fellowship of the Ping </h2>
                 <ul>{players.map((player, index) => (
 
                     // <Name key={ index } index={ index } name={ player.name } />       
                     <li key={index}>
-                    <span >{ player}</span>
+                    <p >{ player}</p>
                     <button onClick={ () => this.handleDelete(index)}>Delete</button>
                     </li>
 
 
                 ))}
                 </ul>
-            </div>
+            </section>
             
-            <div>
-                 <button onClick= { this.handleSubmit }>Start Game! </button>
+              <button className='item4 start-btn btn' onClick= { this.handleSubmit }>Only one to rule them all... </button>
     
-            </div>
-
+            
         </div>
-        </>
+       
 
         )
     }

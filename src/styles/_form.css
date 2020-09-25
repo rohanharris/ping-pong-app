@@ -1,12 +1,87 @@
 .container{
-    display: flex;
-    justify-content: center;
-   
-   
-   
-}
+    padding: 2rem 2rem;
+    display: grid;
+    grid-template-areas: 
+    '. a a .'
+    'b b c c' 
+    'b b c c'
+    '. d d .';
 
-
-.form-component{
+    gap: 2rem;
     
 }
+
+.item1{
+    grid-area: a;
+    text-align:center;
+    font-style: italic;
+    color: rgb(243, 211, 69);
+
+}
+
+.item2{
+    grid-area: b;   
+}
+
+
+.item3{
+    grid-area: c;
+}
+
+
+.item4{
+    grid-area: d;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    margin: auto;
+    
+}
+
+
+.card{
+    border: 1px solid rgb(43, 36, 1);
+    box-shadow: 4px 4px 4px 2px rgba(109, 104, 89, 0.52);
+    text-align: center;
+    background-image:linear-gradient(to bottom, rgb(243, 211, 69), rgb(88, 78, 16));
+    font-style: italic;
+    font-family:  cursive;
+    font-size: 1.5rem;
+
+    color: black;
+  
+}
+
+
+h2{
+    text-decoration: underline black;
+    margin-bottom: 1.5rem;
+}
+
+
+.btn{
+    color: rgb(165, 142, 12);
+    background-color: rgb(5, 7, 5);
+    border:2px solid rgb(17, 16, 2);
+    
+    
+
+}
+
+.start-btn{
+    color: rgb(165, 142, 12);
+    background-color: rgb(5, 7, 5);
+    border:2px solid rgb(156, 147, 15);
+    text-align: center;
+    box-shadow: 4px 4px 4px 2px rgba(121, 119, 42, 0.52);
+    border-radius: 100%;
+    height: 15rem;
+    width: 15rem;
+    font-size: 1.8rem;
+    font-style: italic;
+    font-family: cursive;
+    
+   text-shadow: 2px 2px 8px #978520;
+    
+}
+
