@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 
 class Form extends Component{
@@ -10,54 +9,49 @@ class Form extends Component{
         this.state= {
             name: "",
             players: [],
-            shuffle: [],
-            
             errorName: false,
             errorLength: false,
             
         };
 
         // Binding the event handler so that the name can be deconstructed and 'this' can be used.
-        this.handleName = this.handleName.bind(this);
-        this.handleAdd = this.handleAdd.bind(this);
+
+        this.handleClick = this.handleClick.bind(this)
+        this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleDelete = this.handleDelete.bind(this);
-       
-       
-    }
+    } 
 
-    //  sets the new state to be whatever name is typed into the input box
-    handleName(e){
+
+    // when a name is typed in name is set to the value being entered. The errors are set to false so they disappear when something new is typed. 
+    handleChange(e){
         this.setState({ 
-            name: e.currentTarget.value, 
-            errorName: false
-            // this gets rid of the error message when a name is typed
+            name: e.currentTarget.value,
+            errorName: false,
+            errorLength: false,
         });
+
     }
 
-    
 
-
-    handleAdd(e){
+    // rests name to empty string. creates new version of state and name is added to a new version of players array. 
+    handleClick(e){
         // prevents the page from refreshing 
         e.preventDefault();
         
-        let {name, players, shuffle} = this.state;
+        let { name, players } = this.state;
         
         if( name !== ""){
-        // rests name to empty string. creates new version of state and name is added to player array 
         this.setState({
             players: [ ...players, name],
-            shuffle:[...shuffle, name ],
             name: ""
             });
-        }else {
+        }else{
              this.setState({ errorName: true})
         }
     }
 
 
-
+    //submits names to be matched if the criteria is met
     handleSubmit(e){
         e.preventDefault();
 
@@ -65,12 +59,12 @@ class Form extends Component{
 
         if(players.length > 0 && players.length % 2 === 0){
             this.props.handlePlayers(players);
-            this.props.handleMatch(players);
         } else {
             this.setState({ errorLength: true })
         }
 
     }
+
 
 
     handleDelete(id){
@@ -82,26 +76,25 @@ class Form extends Component{
     render(){
         let { players, name, errorName, errorLength } = this.state;
 
-        // const factorOfTwo = index => {return (index % 2 === 0)}
-
         let wrongName = "You must enter a name!";
         let wrongLength = " You must have an even number of players!"
 
         return(
             <>
             <div>
-                 <p>{ errorName ?  wrongName : errorLength ? wrongLength :  null }</p>
+                <p>
+                    {/* error messages will appear if criteria not met */}
+                    { errorName ?  wrongName : errorLength ? wrongLength :  null } 
+                </p>
             </div>
 
-            
-       
-        <div className="container">
+            <div className="container">
             <form className="form-component">
                 <h2> Add your player</h2>
 
                 <label htmlFor="playerName">Name</label>
                 <input 
-                    onChange={ this.handleName  } 
+                    onChange={ this.handleChange  } 
                     id="playerName" 
                     type="text" 
                     maxLength="30"
@@ -110,13 +103,11 @@ class Form extends Component{
                 ></input>
 
                 <button 
-                    onClick={ this.handleAdd }
+                    onClick={ this.handleClick }
                 >
                 Add
                 </button>
-            
-
-
+        
             </form>
             </div>
 
@@ -126,6 +117,8 @@ class Form extends Component{
             <div>
                 <p> Player's names </p>
                 <ul>{players.map((player, index) => (
+
+                    // <Name key={ index } index={ index } name={ player.name } />       
                     <li key={index}>
                     <span >{ player}</span>
                     <button onClick={ () => this.handleDelete(index)}>Delete</button>
@@ -138,7 +131,7 @@ class Form extends Component{
             
             <div>
                  <button onClick= { this.handleSubmit }>Start Game! </button>
-                 
+    
             </div>
 
         </div>
@@ -152,4 +145,4 @@ class Form extends Component{
 
 export default Form;
 
- {/* <Link to="/match">Start Game!</Link> */}
+ 

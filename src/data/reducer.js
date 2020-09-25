@@ -1,12 +1,15 @@
 import initial from './initial';
 
-const addPlayer = (state, { players }) => {
+const addPlayer = (state, {players}) => {
+    
   return { 
       ...state,
        players: players,
 
     };
 }
+
+
 
 const deletePlayer = (state, {index}) =>{
     let players = state.players;
@@ -20,39 +23,43 @@ const deletePlayer = (state, {index}) =>{
 }
 
 
-export const divide = players => {
+
+const shuffle = (array) => {
+    // use Fisher-Yates algorithm to shuffle arrays
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+};
+
+
+
+
+const divide = players => {
     let pairs = [];
-    let match = Math.floor(players.length / (players.length / 2));
+    let matches = Math.floor(players.length / (players.length / 2));
 
     while (players.length) {
-        pairs.push(players.splice(0, match));
+        pairs.push(players.splice(0, matches));
     }
 
     return pairs;
 };
 
-// Shuffle an array in place using the Fisher-Yates algorithm,
-// adapted from http://bost.ocks.org/mike/shuffle/
-const shuffled = players => {
-    let i, j, t;
-    for( i = players.length - 1;  i > 0; i-- ) {
-        j = Math.floor( Math.random() * i +1 );
-        t = players[i];
-        players[i] = players[j];
-        players[j] = t;
+
+
+
+const assignPlayers =(state)=> {
+    let players = state.players;
+    let playing = divide(shuffle(players));
+
+    return {
+        ...state,
+        playing: playing,
     }
-    return players;
 }
 
-
-const createMatch = (state) => {
-    let shuffle = [...state.players]
-return {
-    ...state, 
-    matches: [divide(shuffled(shuffle))],
-    players: state.players,
-}
-}
 
 
 
@@ -63,6 +70,7 @@ const tournament = (state) => {
     }
 }
 
+
 const reset = () => {
     return{
         ...initial 
@@ -70,11 +78,12 @@ const reset = () => {
 }
 
 
+
 const reducer = (state, action) => {
   switch (action.type) {
-    case "ADDPLAYER" : return tournament(addPlayer(state, action));
+    case "ADDPLAYER" : return tournament(assignPlayers(addPlayer(state, action)));
     // case "DELETEPLAYER" : return deletePlayer(state, action);
-    case "CREATEMATCH" : return createMatch(state, action);
+    
     case "RESET" : return reset(state);
     default: return state;
   }

@@ -3,17 +3,18 @@ import Match from './Match';
 import { reset } from "../../data/actions"
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ( { playing }) => {
     return{
-        players: state.players,
-        matches: state.matches,
+       playing: playing,
     }
 }
+
 
 const mapDispatchToProps = (dispatch) => {
     return{
         handleReset: () => dispatch(reset())
     }
 }
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(Match);

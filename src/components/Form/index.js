@@ -1,31 +1,23 @@
 import { connect } from 'react-redux';
 import Form from './Form';
-import { addPlayer, deletePlayer, createMatch} from '../../data/actions';
+import { addPlayer, deletePlayer } from '../../data/actions';
 
-// const mapStateToProps = (state) => {
-//     return{
-//         players: state.players, 
-       
-//     }
 
-// } this can be turned into this as only returning one value (functions!)--> 
-
-const mapStateToProps = state  => ({
+const mapStateToProps = (state ) => {
+    return{
     players: state.players,
-});
+    }
+};
 
 
 const mapDispatchToProps = (dispatch) => {
     return{
 
-    // onClick: (players) => console.log(players)
-    // }
         handlePlayers: (players) => dispatch(addPlayer(players)),
-        handleMatch: (players) => dispatch(createMatch (players))
+        
 
         // delete: (id) => dispatch(deletePlayer(id)),
     }
-
 
 };
 

@@ -2,7 +2,7 @@
 const initial = {
     players: [],
     matches: [],
-    shuffle:[],
+    playing: [],
     tournament: false,
  
 };

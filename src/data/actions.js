@@ -2,7 +2,6 @@ export const addPlayer = ( players ) => {
     return {
         type: "ADDPLAYER",
         players: players,
-
     }
 
 }
@@ -16,15 +15,6 @@ export const deletePlayer = (id) => {
 
 }
 
-
-export const createMatch = ( {players, shuffle}) => {
-    return {
-        type: "CREATEMATCH",
-        players: players, 
-        shuffle: shuffle,
-    }
-
-}
 
 export const reset = () => {
     return {
