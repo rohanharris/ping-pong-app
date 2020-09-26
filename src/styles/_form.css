@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'MiddleEarth';
+    src: url("https://www.fontspace.com/middleearth-font-f28347")  format('truetype'), 
+  }
+
+
 .container{
     padding: 2rem 2rem;
     display: grid;
@@ -25,9 +31,7 @@
 .item2{
     grid-area: b;  
     height: 15rem;
-    /* display:flex;
-    justify-content: flex-end; 
-    flex-direction: column; */
+    
 }
 
 
@@ -83,9 +87,6 @@ h2{
     background-color: rgb(5, 7, 5);
     border:4px solid rgb(17, 16, 2);
     
-    
-    
-
 }
 
 .start-btn{
@@ -93,7 +94,7 @@ h2{
     background-color: rgb(5, 7, 5);
     border:2px solid rgb(156, 147, 15);
     text-align: center;
-    /* box-shadow: 4px 4px 4px 1px rgba(160, 157, 74, 0.52); */
+    
     border-radius: 100%;
     height: 15rem;
     width: 15rem;
@@ -104,32 +105,27 @@ h2{
 
     margin-top: 1rem;
     
-   /* text-shadow: 3px 2px 8px #978520; */
+   
    box-shadow:
-   inset 0 0 20px #fff,      /* inner white */
-   inset 5px 0 30px rgb(228, 226, 149),   /* inner left magenta short */
-   inset -3px 0 0px rgb(230, 236, 236),  /* inner right cyan short */
-   inset 3px 0 80px rgb(163, 132, 47),  /* inner left magenta broad */
-   inset -5px 0 30px rgb(133, 117, 46), /* inner right cyan broad */
-   0 0 30px #fff,            /* outer white */
-   -3px 0 30px rgb(235, 232, 76),        /* outer left magenta */
-   3px 0 30px rgb(187, 169, 10);         /* outer right cyan */
+    /* inner white */
+    inset 0 0 20px #fff,   
+    /* inner left  */   
+    inset 5px 0 30px rgb(228, 226, 149), 
+    /* inner right */  
+    inset -3px 0 0px rgb(230, 236, 236), 
+    /* inner left */ 
+    inset 3px 0 80px rgb(163, 132, 47), 
+    /* inner right  */
+    inset -5px 0 30px rgb(133, 117, 46),
+    /* outer white */
+    0 0 30px #fff,  
+    /* outer left */    
+    -3px 0 30px rgb(235, 232, 76),
+    /* outer right */        
+    3px 0 30px rgb(187, 169, 10);         
   
-
-   /* -webkit-animation: glow 1s ease-in-out infinite alternate;
-   -moz-animation: glow 1s ease-in-out infinite alternate;
-   animation: glow 1s ease-in-out infinite alternate; */
  }
- /* @keyframes glow {
-   from {
-     text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 
-                  0 0 50px #b9b354, 0 0 60px #b3ad54, 0 0 70px #9c8f43;
-   }
-   to {
-     text-shadow: 0 0 20px #eeeeee, 0 0 30px #a7b846, 0 0 40px #c5c76f, 0 0 50px #cfb51e,
-                  0 0 60px #c27512, 0 0 70px #a37a09, 0 0 80px #bd7f0d;
-   }
- } */
+
 
  .start-btn:hover{
     border: 2px solid black;
@@ -141,15 +137,12 @@ h2{
     text-shadow: 5px 5px 8px #fdfafa;
     color:white;
     font-family:  cursive;
-    
      
  }
 
 
 
 input{
-    
-
     height: 3rem;
     background-color: rgba(63, 47, 12, 0.52);
     color: rgba(245, 176, 49, 0.52);
