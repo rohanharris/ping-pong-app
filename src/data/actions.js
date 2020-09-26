@@ -1,19 +1,12 @@
 export const addPlayer = ( players ) => {
     return {
         type: "ADDPLAYER",
-        players: players,
+        players: players
     }
 
 }
 
 
-export const deletePlayer = (id) => {
-    return {
-        type: "DELETEPLAYER",
-        id: id,
-    }
-
-}
 
 
 export const reset = () => {

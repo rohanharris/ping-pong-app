@@ -11,19 +11,6 @@ const addPlayer = (state, {players}) => {
 
 
 
-const deletePlayer = (state, {index}) =>{
-    let players = state.players;
-
-    players.splice(index, 1);
-
-    return { 
-        ...state, 
-        players: players,
-    };
-}
-
-
-
 const shuffle = (array) => {
     // use Fisher-Yates algorithm to shuffle arrays
     for (let i = array.length - 1; i > 0; i--) {
@@ -82,7 +69,6 @@ const reset = () => {
 const reducer = (state, action) => {
   switch (action.type) {
     case "ADDPLAYER" : return tournament(assignPlayers(addPlayer(state, action)));
-    // case "DELETEPLAYER" : return deletePlayer(state, action);
     
     case "RESET" : return reset(state);
     default: return state;

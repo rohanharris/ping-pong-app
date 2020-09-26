@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Form from './Form';
-import { addPlayer, deletePlayer } from '../../data/actions';
+import { addPlayer } from '../../data/actions';
 
 
 const mapStateToProps = (state ) => {
@@ -14,9 +14,7 @@ const mapDispatchToProps = (dispatch) => {
     return{
 
         handlePlayers: (players) => dispatch(addPlayer(players)),
-        
-
-        // delete: (id) => dispatch(deletePlayer(id)),
+          
     }
 
 };

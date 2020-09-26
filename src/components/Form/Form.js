@@ -19,6 +19,9 @@ class Form extends Component{
         this.handleClick = this.handleClick.bind(this)
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClear = this.handleClear.bind(this);
+
+        
     } 
 
 
@@ -67,14 +70,18 @@ class Form extends Component{
 
 
 
-    handleDelete(id){
-        this.props.delete(id);
-
+    handleClear(){
+        this.setState({
+            ...this.state,
+            players: [],
+            
+        })
     }
 
 
     render(){
         let { players, name, errorName, errorLength } = this.state;
+        
 
         let wrongName = "You must enter a name!";
         let wrongLength = " You must have an even number of players!";
@@ -118,15 +125,21 @@ class Form extends Component{
                 <h2> Fellowship of the Ping </h2>
                 <ul>{players.map((player, index) => (
 
-                    // <Name key={ index } index={ index } name={ player.name } />       
+                    // <Name key={ index } index={ index } name={ player.name } />      
+                    <> 
                     <li key={index}>
                     <p >{ player.toUpperCase()}</p>
-                    <button className='btn' onClick={ () => this.handleDelete(index)}>Delete</button>
                     </li>
-
+                    
+                
+                    </>
 
                 ))}
                 </ul>
+            
+                <button className='btn' onClick={ this.handleClear }>clear</button>
+                
+                
             </section>
             
               <button className='item4 start-btn btn' onClick= { this.handleSubmit }>One Ping to rule them all... </button>
