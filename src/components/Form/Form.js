@@ -94,12 +94,10 @@ class Form extends Component{
                     {/* error messages will appear if criteria not met */}
                     { errorName ?  wrongName : errorLength ? wrongLength :  null } 
                 </p>
-            
-
-            
-            <form className="item2 card">
-                <h2> Add your player</h2>
-                
+               
+                <form className="item2 card">
+                    <h2> Add your player</h2>
+                    
                     <label htmlFor="playerName" ></label>
                     <input 
                         placeholder="Enter a name.."
@@ -108,46 +106,38 @@ class Form extends Component{
                         type="text" 
                         maxLength="30"
                         value={ name}
-                   
+                
                     ></input>
 
-                <button className='btn'
-                    onClick={ this.handleClick }
-                >
-                Add
-                </button>
-        
+                    <button className='btn'
+                        onClick={ this.handleClick }
+                    >
+                    Add
+                    </button>
+            
                 </form>
            
 
-            {/* maps over player array and shows them as list items  */}
-            <section className='card item3'>
-                <h2> Fellowship of the Ping </h2>
-                <ul>{players.map((player, index) => (
+                {/* maps over player array and shows them as list items  */}
+                <section className='card item3'>
+                    <h2> Fellowship of the Ping </h2>
+                    <ul>{players.map((player, index) => (
+        
+                        <> 
+                        <li key={index}>
+                        <p >{ player.toUpperCase()}</p>
+                        </li>
+                        </>
 
-                    // <Name key={ index } index={ index } name={ player.name } />      
-                    <> 
-                    <li key={index}>
-                    <p >{ player.toUpperCase()}</p>
-                    </li>
-                    
+                    ))}
+                    </ul>
                 
-                    </>
-
-                ))}
-                </ul>
+                    <button className='btn' onClick={ this.handleClear }>Clear All</button>   
+                </section>
             
-                <button className='btn' onClick={ this.handleClear }>clear</button>
-                
-                
-            </section>
-            
-              <button className='item4 start-btn btn' onClick= { this.handleSubmit }>One Ping to rule them all... </button>
-    
-            
-        </div>
+                <button className='item4 start-btn btn' onClick= { this.handleSubmit }>One Ping to rule them all... </button>
+            </div>
        
-
         )
     }
 
