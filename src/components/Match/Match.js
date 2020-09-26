@@ -21,7 +21,7 @@ class Match extends Component{
         
         return(
             <>
-                <h2> ...to rule them all! </h2>
+                <h2 className='pong-text'> ...One Pong to bind them! </h2>
 
                 <div className='card match'> 
                     <h2 className="match-head">Battle list</h2> 
