@@ -120,7 +120,7 @@ class Form extends Component{
 
                     // <Name key={ index } index={ index } name={ player.name } />       
                     <li key={index}>
-                    <p >{ player}</p>
+                    <p >{ player.toUpperCase()}</p>
                     <button onClick={ () => this.handleDelete(index)}>Delete</button>
                     </li>
 
