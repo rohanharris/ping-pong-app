@@ -3,6 +3,8 @@
 @import "./styles/_form.css";
 @import "./styles/_match.css";
 
+@import "./styles/_media_queries.css";
+
 
 
 body{
