@@ -121,7 +121,7 @@ class Form extends Component{
                     // <Name key={ index } index={ index } name={ player.name } />       
                     <li key={index}>
                     <p >{ player.toUpperCase()}</p>
-                    <button onClick={ () => this.handleDelete(index)}>Delete</button>
+                    <button className='btn' onClick={ () => this.handleDelete(index)}>Delete</button>
                     </li>
 
 
@@ -129,7 +129,7 @@ class Form extends Component{
                 </ul>
             </section>
             
-              <button className='item4 start-btn btn' onClick= { this.handleSubmit }>Only one... </button>
+              <button className='item4 start-btn btn' onClick= { this.handleSubmit }>One Ping to rule them all... </button>
     
             
         </div>

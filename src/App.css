@@ -1,6 +1,8 @@
 @import "./styles/_reset.css";
 @import "./styles/_header.css";
 @import "./styles/_form.css";
+@import "./styles/_match.css";
+
 
 
 body{

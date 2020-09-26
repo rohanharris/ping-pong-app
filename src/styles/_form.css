@@ -14,11 +14,11 @@
 
 .item1{
     grid-area: a;
-    text-align:center;
+    text-align: center;
     font-style: italic;
-    font-family:  cursive;
+    font-family:  'Middleearth',cursive;
     font-size: 2rem;
-    color: rgb(243, 211, 69);
+    color: rgb(245, 241, 234);
 
 }
 
@@ -47,10 +47,11 @@
 
 
 .card{
-    border: 1px solid rgb(43, 36, 1);
-    box-shadow: 4px 4px 4px 2px rgba(109, 104, 89, 0.52);
+    
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px 2px rgba(231, 222, 196, 0.52);
     text-align: center;
-    background-image:linear-gradient(to bottom, rgb(243, 211, 69), rgb(88, 78, 16));
+    background-image:linear-gradient(to bottom, rgb(241, 223, 141), rgb(88, 78, 16));
     font-style: italic;
     font-family: cursive;
     font-size: 1.5rem;
@@ -62,12 +63,14 @@
 p{
     font-size: 2rem;
     font-weight: 900;
+    
     font-family: 'MiddleEarth',cursive;
 
 }
 
 
 h2{
+    font-size: 2.5rem;
     font-family: 
     'MiddleEarth', cursive; 
     text-decoration: underline black;
@@ -97,17 +100,21 @@ h2{
     font-size: 1.8rem;
     font-style: italic;
     font-family: cursive;
+    outline: none;
+
+    margin-top: 1rem;
     
-   text-shadow: 3px 2px 8px #978520;
+   /* text-shadow: 3px 2px 8px #978520; */
    box-shadow:
    inset 0 0 20px #fff,      /* inner white */
    inset 5px 0 30px rgb(228, 226, 149),   /* inner left magenta short */
-   inset -3px 0 20px rgb(230, 236, 236),  /* inner right cyan short */
+   inset -3px 0 0px rgb(230, 236, 236),  /* inner right cyan short */
    inset 3px 0 80px rgb(163, 132, 47),  /* inner left magenta broad */
    inset -5px 0 30px rgb(133, 117, 46), /* inner right cyan broad */
    0 0 30px #fff,            /* outer white */
    -3px 0 30px rgb(235, 232, 76),        /* outer left magenta */
    3px 0 30px rgb(187, 169, 10);         /* outer right cyan */
+  
 
    /* -webkit-animation: glow 1s ease-in-out infinite alternate;
    -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -123,6 +130,19 @@ h2{
                   0 0 60px #c27512, 0 0 70px #a37a09, 0 0 80px #bd7f0d;
    }
  } */
+
+ .start-btn:hover{
+    border: 2px solid black;
+    box-shadow:   
+        0 0 30px #fff,          
+        -3px 0 30px rgb(235, 232, 76),       
+        3px 0 30px rgb(187, 169, 10);   
+        
+    text-shadow: 5px 5px 8px #fdfafa;
+    color:white;
+     
+ }
+
 
 
 input{

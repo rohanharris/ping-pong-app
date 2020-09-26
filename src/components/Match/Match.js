@@ -23,19 +23,21 @@ class Match extends Component{
             <>
                 <h2> ...to rule them all! </h2>
 
-                <div> 
-                    <p>playing list</p> 
+                <div className='card match'> 
+                    <h2 className="match-head">Battle list</h2> 
 
                     {playing.map((player,index) => (
                         
                        
-                    <div key={index}>{player[0]} vs {player[1]}</div>
+                    <p className='battle' key={index}>{player[0]} <span>vs</span> {player[1]}</p>
                     
                     
                 ))}
 
                 </div>
-                <button onClick= { this.props.handleReset }>Reset</button>
+                <div className='reset'>
+                <button className='reset-btn' onClick= { this.props.handleReset }>Reset</button>
+                </div>
             </>
         )
     }
