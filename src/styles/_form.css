@@ -148,6 +148,7 @@ input{
     color: rgba(245, 176, 49, 0.52);
     font-size: 1.5rem;
     border: none;
+    /* this is bad practice - not good for accesibility */
     outline: none;
     
     background-image: linear-gradient(to bottom, #8a7105, #221801);
