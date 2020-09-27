@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ping-pong-app/static/css/main.855619e1.chunk.css",
+    "main.js": "/ping-pong-app/static/js/main.47975dbe.chunk.js",
+    "main.js.map": "/ping-pong-app/static/js/main.47975dbe.chunk.js.map",
+    "runtime-main.js": "/ping-pong-app/static/js/runtime-main.9ff82a9c.js",
+    "runtime-main.js.map": "/ping-pong-app/static/js/runtime-main.9ff82a9c.js.map",
+    "static/js/2.477444db.chunk.js": "/ping-pong-app/static/js/2.477444db.chunk.js",
+    "static/js/2.477444db.chunk.js.map": "/ping-pong-app/static/js/2.477444db.chunk.js.map",
+    "index.html": "/ping-pong-app/index.html",
+    "precache-manifest.d5a8f78cf092634444a8cee0566599ff.js": "/ping-pong-app/precache-manifest.d5a8f78cf092634444a8cee0566599ff.js",
+    "service-worker.js": "/ping-pong-app/service-worker.js",
+    "static/css/main.855619e1.chunk.css.map": "/ping-pong-app/static/css/main.855619e1.chunk.css.map",
+    "static/js/2.477444db.chunk.js.LICENSE.txt": "/ping-pong-app/static/js/2.477444db.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9ff82a9c.js",
+    "static/js/2.477444db.chunk.js",
+    "static/css/main.855619e1.chunk.css",
+    "static/js/main.47975dbe.chunk.js"
+  ]
+}
