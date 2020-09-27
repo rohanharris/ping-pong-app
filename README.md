@@ -1,68 +1,56 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Lord of the Ping
+This was a technical challenge set by DevelopMe as a final project at the end of the Coding Fellowship. 
 
-## Available Scripts
+This app is a tool to create random pairings for a match, from given names, for a Ping Pong tournament. It is built with React and Redux. 
 
-In the project directory, you can run:
+A working version of the app can be found here: 
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## The Brief
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The core of the challenge is to create a tool which randomly creates pairings for a table tennis tournament bracket from a list of names collected from the user.
 
-### `npm test`
+It's up to you how you implement this, with JavaScript, React, or PHP, as a web page, or as an app.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## SetUp Instructions
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Set up a repo locally
+2. Run git clone git@github.com:rohanharris/lordoftheping.git <desired sub-directory>. This will clone the project to your desired folder.
+2. Go to your project directory and run npm install. This will install any dependencies into the local node_modules folder.
+3. Run npm start.
+4. This will open http://localhost:3000 in the browser where you can view the app and the files will be available to see in your code editor. 
+  
+  
+## The App
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+I started by planning the basic functional design using Balsamiq to create a wireframe before moving on to creating the challenge. I decided to use React and Redux as I felt comfortable using React to create components and needed to practice Redux and state management. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The skills I used creating this app are:
 
-### `npm run eject`
+1. HTML
+2. CSS
+3. JavaScript
+4. JSX
+5. React
+6. Redux
+7. Version Management with Git and GITHUB
+8. Wireframes
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I created a basic front page where the players names can be added. These are then added to a list on the same page, so that they can be seen, and a clear button was created so that the list can cleared and recreated. Once all the players names have been entered, the user clicks the button to take them to the match page where a list of matches can be found. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Further Work
 
-## Learn More
+* I would like to add more fuctionality to the app, such as a delete button for each individual player and a scoreboard on the match page.
+* Add more form validation so only a valid name can be entered.
+* Implement Laravel to practice my backend skills. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Reflection
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* I decided not to use bootstrap and create my own custom CSS files. The file structure could be better and I could implement an atomic design into this. 
+* I would also like to learn more about SCSS, and implement it. I decideded not to as this was only briefly touched on during the course.
+* I would like to focus much more on accesibility so that everyone can have a great user experience. 
+* Learning Redux (as I missed a lot of the teaching on the week it was taught) and using it to create the app was a challenge. I feel like the app could now be       made in less time and so more functionality could be added.
