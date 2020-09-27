@@ -85,14 +85,14 @@ class Form extends Component{
 
         let wrongName = "You must enter a name!";
         let wrongLength = " You must have an even number of players!";
-        // let startMessage = "Welcome! Enter your names and click the ring! Who will be the Lord of the Pings?"
+        let startMessage = "Welcome! Enter your names and click the ring! Who will be the Lord of the Pings?"
 
         return(
             
             <div className='container'>
                 <p className='item1'>
                     {/* error messages will appear if criteria not met */}
-                    { errorName ?  wrongName : errorLength ? wrongLength :  null } 
+                    { errorName ?  wrongName : errorLength ? wrongLength :  startMessage } 
                 </p>
                
                 <form className="item2 card">
