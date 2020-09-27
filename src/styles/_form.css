@@ -144,7 +144,7 @@ h2{
 
 input{
     height: 3rem;
-    background-color: rgba(63, 47, 12, 0.52);
+    /* background-color: rgba(63, 47, 12, 0.52); */
     color: rgba(245, 176, 49, 0.52);
     font-size: 1.5rem;
     border: none;
