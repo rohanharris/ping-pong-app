@@ -3,7 +3,7 @@ This was a technical challenge set by DevelopMe as a final project at the end of
 
 This app is a tool to create random pairings for a match, from given names, for a Ping Pong tournament. It is built with React and Redux. 
 
-A working version of the app can be found here: 
+A working version of the app can be found here: https://rohanharris.github.io/ping-pong-app/
 
 
 ## The Brief
