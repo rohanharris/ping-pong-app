@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ping-pong-app/static/css/main.d9d362ef.chunk.css",
+    "main.css": "/ping-pong-app/static/css/main.ea140535.chunk.css",
     "main.js": "/ping-pong-app/static/js/main.45557ff6.chunk.js",
     "main.js.map": "/ping-pong-app/static/js/main.45557ff6.chunk.js.map",
     "runtime-main.js": "/ping-pong-app/static/js/runtime-main.9ff82a9c.js",
@@ -8,15 +8,15 @@
     "static/js/2.477444db.chunk.js": "/ping-pong-app/static/js/2.477444db.chunk.js",
     "static/js/2.477444db.chunk.js.map": "/ping-pong-app/static/js/2.477444db.chunk.js.map",
     "index.html": "/ping-pong-app/index.html",
-    "precache-manifest.7aba92578d83c5f3af2344695ca52e25.js": "/ping-pong-app/precache-manifest.7aba92578d83c5f3af2344695ca52e25.js",
+    "precache-manifest.741a13e0828f3263deb167c568f094c2.js": "/ping-pong-app/precache-manifest.741a13e0828f3263deb167c568f094c2.js",
     "service-worker.js": "/ping-pong-app/service-worker.js",
-    "static/css/main.d9d362ef.chunk.css.map": "/ping-pong-app/static/css/main.d9d362ef.chunk.css.map",
+    "static/css/main.ea140535.chunk.css.map": "/ping-pong-app/static/css/main.ea140535.chunk.css.map",
     "static/js/2.477444db.chunk.js.LICENSE.txt": "/ping-pong-app/static/js/2.477444db.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9ff82a9c.js",
     "static/js/2.477444db.chunk.js",
-    "static/css/main.d9d362ef.chunk.css",
+    "static/css/main.ea140535.chunk.css",
     "static/js/main.45557ff6.chunk.js"
   ]
 }
